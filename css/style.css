@@ -19,7 +19,8 @@ body {
   text-align: center;
 }
 .container {
-  width: clamp(25%, 40%, 60%);
+  width: 500px;
+  height: 200px;
   display: grid;
   grid-template-columns: 1fr;
   font-size: 4em;
@@ -77,4 +78,13 @@ body {
   top: 1%;
   right: 1%;
   font-size: 2rem;
+}
+
+@media (width < 500px) {
+  body {
+    height: auto;
+  }
+  .bxs-plus-square {
+    position: relative;
+  }
 }
