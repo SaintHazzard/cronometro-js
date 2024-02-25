@@ -63,6 +63,10 @@ class Timer {
 
 let timers = document.querySelectorAll(".container");
 let timersArray = [];
+timers.forEach((timer, index) => {
+  timersArray.push(new Timer(timer, index));
+});
+
 timerAdd.addEventListener("click", () => {
   let baseTimer = `<div class="container">
       <div class="timer">
@@ -85,6 +89,8 @@ timerAdd.addEventListener("click", () => {
     timers.forEach((timer, index) => {
       timersArray.push(new Timer(timer, index));
     });
+  } else {
+    alert(`You cant add more timers`)
   }
 })
 
